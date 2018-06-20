@@ -1,9 +1,10 @@
 <div class="searchplace">
-  <input type="text" id="searchid" placeholder="Search city name here">
-  <button class="btn" type="button">submit</button>
+  <input type="text" id="searchid" placeholder="Search city name here..." #cityName>
+  <button class="btn" type="button" (click)="searchButton(cityName.value)">submit</button>
 </div>
 <div class="container">
-<app-summary></app-summary>
+<app-summary [summaryInfo]="weatherService.summary"></app-summary>
 <app-temperature></app-temperature>
 <app-tpw></app-tpw>
+<app-daytile></app-daytile>
 </div>
